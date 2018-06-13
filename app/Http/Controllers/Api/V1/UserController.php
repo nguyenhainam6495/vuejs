@@ -1,5 +1,5 @@
 <?php
-
+///
 namespace App\Http\Controllers\Api\V1;
 
 use App\Models\User;
@@ -44,7 +44,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required:min:6',
         ]);
-        
+
         $user = new User();
 
         $user->name = $request->get('name');
